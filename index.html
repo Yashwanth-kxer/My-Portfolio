@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio Website</title>
    <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/13bc9bb5d3.js" crossorigin="anonymous"></script>
 </head>
 <body>
    <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo" alt="logo">
+            <img src="images/logo5.png" class="logo" alt="logo">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -21,9 +22,117 @@
             </ul>
 
         </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span>Yashwanth</span><br> From Mysuru</h1>
+        </div>
+    </div>
+   </div>
+<!-- ======================about========================== -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ex odio vitae, quasi, quo voluptatum tempora minus voluptatem dignissimos qui est possimus incidunt facere et consectetur repellat consequuntur sequi dolore aperiam. Debitis tempore fugit incidunt consequuntur atque ae voluptatibus blanditiis. Quis inventore unde aut?</p>
+                <div class="tab-title">
+                    <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experiences</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designer Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web/App interfaces</li>
+                        <li><span>App Development</span><br>Building Android/ios Apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute.</li>
+                        <li><span>2019 - 2021</span><br>Team lead at StartApp LLC.</li>
+                        <li><span>2016 - 2017</span><br>Internship at ekart eComerce.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021</span><br>UI/UX Designer Training at ET Institute.</li>
+                        <li><span>2016</span><br>MBA from MIT Bangalore.</li>
+                        <li><span>2014</span><br>BBA from ISM Bangalore.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
    </div>
+<!-- =====================================services======================================= -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quo magni minima quibusdam. Provident, assumenda?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quo magni minima quibusdam. Provident, assumenda?</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quo magni minima quibusdam. Provident, assumenda?</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ===========================portfolio=============================== -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png" alt="work">
+            </div>
+            <div class="work">
+                <img src="images/work-2.png" alt="work">
+            </div>
+            <div class="work">
+                <img src="images/work-3.png" alt="work">
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+   <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tl of tablinks ){
+                tl.classList.remove("active-links");
+            }
+            for(tc of tabcontents ){
+                tc.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+   </script>
 
 </body>
 </html>
