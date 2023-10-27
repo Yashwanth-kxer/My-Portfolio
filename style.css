@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/myimage2.png);
+    background-image: url(images/mypic.png);
     background-size: cover;
     background-position: center;
 }
@@ -386,7 +386,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/phone-background.png);
+        background-image: url(images/phonebackgroundpic2.png);
     }
     .header-text{
         margin-top: 100%;
